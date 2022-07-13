@@ -1,2 +1,2 @@
-# A_B
+# Android Anki-Blank
 Android Anki-Blank
