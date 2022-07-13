@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/gogeneral"
+            android:icon="@drawable/ic_baseline_settings_24"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="@string/General_setting"
+            />
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/schedule"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="@string/Pick_customized_schedule"
+            />
+
+        <item
+            android:id="@+id/db_clear"
+            android:icon="@drawable/db_clear"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="@string/Clear_unusing_learning_data"
+            tools:ignore="InvalidId" />
+
+
+    </group>
+</menu>

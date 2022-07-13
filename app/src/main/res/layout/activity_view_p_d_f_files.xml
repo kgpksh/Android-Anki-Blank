@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidUnresolvableTag -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewPDFFiles">
+
+    <LinearLayout
+        android:id="@+id/ending"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Study finished"
+            android:textColor="#000000"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/backtomain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/close_study_page" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/maincontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.barteksc.pdfviewer.PDFView>
+
+        <com.first.Anki_blank.TouchAccept
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.first.Anki_blank.TouchAccept>
+
+        <ScrollView
+            android:id="@+id/Touchlistener"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ScrollView>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttontray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/rdgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0AE31F"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_left"
+                android:button="@drawable/empty_background"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="@string/read_read"
+
+                android:textColor="@drawable/rdbt_textcolor"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@drawable/empty_background"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="@string/read_noblank"
+                android:textColor="@drawable/rdbt_textcolor"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/blank"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button"
+                android:button="@drawable/empty_background"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="@string/read_create_blank"
+                android:textColor="@drawable/rdbt_textcolor"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/erase"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_right"
+                android:button="@drawable/empty_background"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="@string/read_delete_blank"
+                android:textColor="@drawable/rdbt_textcolor"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/learningtray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/show_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/show_answer"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/four_button_tray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/again"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#F44336"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/againtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:textColor="#454242"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/again"
+                    android:textColor="#000000"
+                    android:textSize="23dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FF9800"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hardtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:textColor="#454242"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/hard"
+                    android:textColor="#000000"
+                    android:textSize="23dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/good"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#F6E441"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/goodtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:textColor="#454242"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/good"
+                    android:textColor="#000000"
+                    android:textSize="23dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/easy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#52C34A"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/easytime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:textColor="#454242"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/easy"
+                    android:textColor="#000000"
+                    android:textSize="23dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

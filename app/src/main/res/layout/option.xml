@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Auto zoom in during study"
+                    android:textSize="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/zoom_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:max="100"
+                        android:min="10"
+                        android:progress="10" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="X"
+                        android:textColor="#000000"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/zoom"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:inputType="numberDecimal"
+                        android:textColor="#000000"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layoutborder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/newCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/New_card"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/When_press_again"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/whenagain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/When_press_good"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="1st  "
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/whengood1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:text="10"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="2nd  "
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/whengood2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="3rd"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/whengood3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="4th"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/whengood4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="5th"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/whengood5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/graduating_interval_in_days"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/gruduating"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Easy_interval_in_days"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/easyinterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="4"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Starting_ease"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/startingease"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="250"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layoutborder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/Graduated"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Easy_bonus"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/easybonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="130" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Interval_modifier"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/intervalmodifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="100" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Maximun_interval"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/maximuminterval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="36500" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layoutborder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/relearning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/Relearning"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/When_press_again"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/whenreagain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/When_press_good"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="1st"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/relearningsteps1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:text="15" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="2nd"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/relearningsteps2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="3rd"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/relearningsteps3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="4th"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/relearningsteps4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-black"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="1dp"
+                            android:text="5th"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/relearningsteps5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="7.5"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/after_relearning_interval"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/relearningintervalpercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="100" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minimum interval(in days)"
+                    android:textSize="25dp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/relearningminimum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="1"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
